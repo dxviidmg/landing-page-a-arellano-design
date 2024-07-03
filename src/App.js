@@ -5,8 +5,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { NavBar } from "./components/navbar/CustomNavBar";
-import BasicExample from "./components/card/Card";
+import CustomCard from "./components/card/Card";
 import Inicio from "./components/sections/Inicio";
+import Educacion from "./components/sections/educacion";
 
 function App() {
   return (
@@ -14,13 +15,12 @@ function App() {
       <NavBar></NavBar>
       <Container style={{ marginTop: "70px" }}>
         <Row>
-          <Col md={4} style={{backgroundColor: ''}}>
-          <BasicExample></BasicExample>
+          <Col md={4}>
+          <CustomCard isFixed={true}></CustomCard>
           </Col>
           <Col md={8}>
             <Inicio></Inicio>
-            <Inicio></Inicio>
-            <Inicio></Inicio>
+            <Educacion></Educacion>
           </Col>
         </Row>
         wefefw
