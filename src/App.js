@@ -8,6 +8,7 @@ import { NavBar } from "./components/navbar/CustomNavBar";
 import CustomCard from "./components/card/Card";
 import Inicio from "./components/sections/Inicio";
 import Educacion from "./components/sections/educacion";
+import Skills from "./components/sections/skills";
 
 function App() {
   return (
@@ -21,11 +22,10 @@ function App() {
           <Col md={8}>
             <Inicio></Inicio>
             <Educacion></Educacion>
+            <Skills></Skills>
           </Col>
         </Row>
-        wefefw
       </Container>
-      fdsfdsdfs
     </>
   );
 }
