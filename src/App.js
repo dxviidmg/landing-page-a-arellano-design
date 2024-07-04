@@ -9,6 +9,7 @@ import CustomCard from "./components/card/Card";
 import Inicio from "./components/sections/Inicio";
 import Educacion from "./components/sections/educacion";
 import Skills from "./components/sections/skills";
+import Contact from "./components/sections/Contact";
 
 function App() {
   return (
@@ -17,12 +18,13 @@ function App() {
       <Container style={{ marginTop: "70px" }}>
         <Row>
           <Col md={4}>
-          <CustomCard isFixed={true}></CustomCard>
+          <CustomCard isFixed={true} title={'David Mejia'} subtitle={'Full Stack'} img={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHXCaI3sS-7XvMtZvdbSuVjDd6zlSYNbU-HDCF6bZl6Gq1jSNIV2VDOQ8DAxAe11VsJDA&usqp=CAU'} text={'Se el mejor'}></CustomCard>
           </Col>
           <Col md={8}>
             <Inicio></Inicio>
             <Educacion></Educacion>
             <Skills></Skills>
+            <Contact></Contact>
           </Col>
         </Row>
       </Container>
