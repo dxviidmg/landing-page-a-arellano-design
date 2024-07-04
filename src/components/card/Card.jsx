@@ -4,7 +4,7 @@ import './card.css'
 
 import UseWindowDimensions from '../useWindowDimensions/useWindowDimensions';
 
-function CustomCard({isFixed=false}) {
+function CustomCard({title, subtitle, text, img, isFixed=false}) {
     const { width } = UseWindowDimensions();
 
     const isMdOrLarger = width >= 768
@@ -14,12 +14,12 @@ function CustomCard({isFixed=false}) {
     
 
         <Card className={` ${isFixed && isMdOrLarger ? ' fixed-card' : ''}`}>
-      <Card.Img variant="top" src="" />
+      <Card.Img variant="top" src={img} />
       <Card.Body>
-        <Card.Title>David Mejia</Card.Title>
-        <Card.Title>Full Stack web Developer</Card.Title>
+        <Card.Title>{title}</Card.Title>
+        <Card.Title>{subtitle}</Card.Title>
         <Card.Text>
-        Cualquier tecnología suficientemente avanzada es indistinguible de la magia.
+{text}
         </Card.Text>
       </Card.Body>
     </Card>

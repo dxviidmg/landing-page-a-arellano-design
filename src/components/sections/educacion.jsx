@@ -1,23 +1,36 @@
-import React from 'react'
-import CustomCard from '../card/Card'
+import React from "react";
+import CustomCard from "../card/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-
 const Educacion = () => {
-
-    const grades = [{'grade': 'ITIC'}, {'grade': 'ITIC'}]
+  const grades = [
+    {
+        grade: "Python para Inteligencia Artificial",
+        period: "2021",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUGtH2CN1ASGzg8dnFD_1MDQm9vww185oHEw&s",
+      },
+    {
+      grade: "Diplomado en Inteligencia Artificial",
+      period: "2018-2019",
+      img: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhITBxIWFRUSGBUYGBgSFRIVEBcYFxUWFxgVFhYYHyogGBolHRcWIzEtJSkrLi4uFx8zOjMsOigtLysBCgoKDQ0NFQ8QGDQfHR0rKys3LSstNS0rKysrKysrKysrKys3Ky0rKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABgEDBAUHAv/EAEoQAAIBAwEEBgUGBw8FAAAAAAABAgMEEQUGEiExBxNBUWFxIjKBkaEUFTM0crE1QlJikrPBIzZTVHN0gpOissLR0uHwFiQlY4P/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAaEQEAAgMBAAAAAAAAAAAAAAAAARIRUWEC/9oADAMBAAIRAxEAPwDuIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB462P5S96FX1X5P7jhWwGxnznTuKt5e3VN0684JU6i3cYUs+kn+UB3eMk/VafkG8esck1bYm+0yDutmL6vV6r0p0q8lNTj24WMZ9mfE32u7QK80GvdWj3XOi291tOMlJJpPzAnqeeRUjfRzNvTbR1G23T5t5frS7SRVKijxqNJeLSQHoFulcQl9FKMvstP7i4AB5nNJZm0l3vgjzSuIS+ilGX2Wn9wFwAonnkBUFG+8o6i4cVx5ePkB6BZndU08TnFPucopl1PPICoLM7qCeJzin3OUUy6n3AVB5nNJZm0l3vgiz8upfwsP04/5gZALMLqnJ4pzi33KUWz3UqKKzUaS720l8QPYLNK7pyeKU4yfhKLfwPdSrGKzVaS720l8QPTfeUjUi/Vafk0cu251Cd7qVvpttdSoUHB1Ks6M4xlLhLdSn/R5eJJdO0O2sLO4jZVZT34VH1lWrvTk914SeccPACWxkn6rz5FTnfQvfx+bY/K6q3utrevNb2OseObydDjJNZjxT7uQFQAB4q+rLyf3HNOgl4trzP8an/cgdLrerLyf3HCujbYmN/TualS6uKO5XnDdoVHGL4ReWl28fgB1jbXaKhZ2tWpdyWXFqMcrelJppJIgWmaZO32XrxuliU6cp4fNKUo4+Cz7SQaX0VWdOpGrfVK9zKHqq4qb8E+/D/wAzadJkUtKvVHglS7OXOIGDsvrFOz0ShcXfq0qLfm95pL34I1pGzV5ra+V7TXNWjQqZ6qhQe6tzPByzlP2pvyMPauMnsxa9XyW458/V3p5z7cGw0rT9opUaUtPu7Tq3CO5je9XCwvUAyL7oo6hdbshd16NaHGKlNOlJ90kkvjleBvujnayd5TqUtWioXVs9yrFLCf5yX/OZo/mvab+N2v8Aa/0HvYDZm9oX9zda3XoVHWhuzVCbb3s5zKOFgDXUaFfX7u466vUo2NtNwUaT3ZVGvyn7+eS9r3R07ClK62NuK1OpRTm4SnvU5pcWmsc/PJl9Bv1e6/nE/wBpP9Y+grfYl9zAgWtbW1K+gSvLKXV1Jw3ZOP4sk3Ge73cU8E22YebO0cuLdCjz5/RxOOaZ+9Spn8up+tkdi2Wf/ZWmP4Cj+riBHel/UatDTpSsZuEp1KcG4892WcpPs5EO6UK1yqmjR0apKNWpTcY7smlmUaUcyXJ4TbJN04P/AMb/APel/iNTtZ9f2d+zL9XADMteiC3lDe1u4uK1eXGVTrFwl+ZlNpe0i+sXuqaRV+b7Gu60bvEbedXMqkG5xi+L7t5e/wADuZy3pQ/C2h/bqfrKIF616ILecN7W7i4q15LLqdYliT57iaeOPe2Wtl7y50zUY6bqtaVahXi5UKlTLqLH4rfbx4ebOonMNu/w7o/2Z/rIgedoaNXVNVqafWrTo21tThOcaUt2dVzXf2oz10O6X+TV/rP9jL2x2Mr1riF7s1cfJ7mK3ZNrMKkeWJeS8Gam5pbS0YuoqlpWUOLglUUpJdi5LPtA21tsvp2jU615Qg804NuU5bzSXZHuyRTR9n7zXc3W0depRtpN9VQovdzFPm88Pa088eRe222i+cdBnWoxcZRqRjWh2wcW99Pwxh+06LslUhKytXaY3eqp4xy4RSfxyBBb3oeo0o7+zFzWoVo8YvfW42uSlupP9ngZOxWsvUadzpu2FNOvQ4TyvXjw9NdzWY8V3o6QcrtmpbUVPkXKNtirjvzxz48afwAjlfYKyWuRsVGXUOgqjW96W81U7f6KJ9qHR5Y07GtQjGcqcU6kVOWdycU2nB/i+Jqbj99NP+ax+6qdC1v6vX/k6n91gce6MujuxvrGNfVISc+sqxzGWFiM2l2dx1/RdLha0o0bWU3CHCPWS3pJd2e4hvQb+C4/ytf9YzoIAAAeKvqvyf3HOeg+3nC2vFcwlBu6m0pxlFtbkFlZ5o6SUUUuSAqRnpKg5aXeqkm26Twkm2+K5JcyTFGs8wIhsjpUK+j0LfUIvdqUnGSaaa9J44PtTwyKWVzqmh5oVLaV7Zpvqp0uNaC57rist+729h1pLHIqByq52+1K8XU7M6bWpTnw624ThGHfJKSSePP2MluweyzsKEldVHUrVXvVJttpvujnsRJ8dxSc0lmbSS7XwQEI6JtDrWttV+cI7rrVZVIx/GUW3je7mS7Vot0aqgstwlhLnyMK82osqX1i5pLwUlJ+6OTUVOkSyxmz62t/JUpv4ySQSfUbanYzY2b0T5FrS3JVo1G1zcN+UpRz4rKNRo21t7pEFabTWVarClmNOtbx31KPNJ9nhxafDkSapt1Vl9Q066l4zg4L9pYntPqdThQ0vh+fUX3NBm8I9cSvNfrUYytp21jRmpydZbtSo08r0f8Ai58Ta7d2cvnTRfk1OThTlVTcYycYrdilvNcF7TL+ddcf0djTivGpS/1Hl3evvlb0F5um/wDEC/HQDmfSVaVJ6posqFOcownPelGMpRjmdH1mliPJ8+4zFdbQdtGh/Y/1lVf68vXtKUvKVNf4gX4n5zbba0qS1vSZ0qc5Qgp70oxk4R9NetJLC9pmLXdaj9Np0X5Vaf7Gz1HbG+X1rS6v9Buf7AXhtNrtso6e4fKbW5qxnylbwhOKfdLMk0/YRm46WVUi4aTp15OrJNRU6SjDL7W03hew3C2+p8Ff2V1T+3RzH2cTLtNudNlLCrRhLunCUGva0FtG2u2E2OlS0+vR15JzvZ1KtWK5Rc0luryUV7SM2VbU9BcqPyeV5ZZbpyp5dSCfY0k38MeJ1a01OhVx8kq055/InGT+BleYacouOk68uV1WzOm1+slw36sXGEM9vHh72iR9HOx0rKNWtq0+surl5qS5pfmp9v8Asu4mcIJeokvJJHoDmtxa1P8AqaFTq59X8mS392XV5xU4b2MZ4on2sxbt66ist054S5+qzLwVA510UWteGkShCEqdXfuN1Ti4STc5brxJeRv9kaF1Bz+ccqGOCk03vt5bXhjh5klS7ioAAAAAAAAFutVUVmWfYm37kYdW5rS+qUsdzqy3Y+6OZJ+aM/BUDSVdOuqn0911a7qMMP8ATbz8Cy9j7eTzfOpWf/uqOS9xIQExDV2uz1pT+rW9OPlFGBq2uxt51I9VBxpRUpPehGTT7Ip82SMj+pbPdZXdxBxVSO71babSxzUu+LBiGfX1mhCW7VnhrGeD3YZ5b8uUPbjmUu9boUpONeeHHG88NxjnDSnJcI5TXPvRrL7ZxzqVJQjRkqzi5OrFynHEYx9FcmvR7S5faLWfXxs5U1C4cW3NNzi1GMcRxwa9Ht7wrY19Zowluzlxwm92MpKKlyc2liOfHBj0NoKTqVadV7rp1FDPFx4whKLb5RzvYWeeC3T02vTlP5DKnu1XGU+sUt5OMIQe7jg1iC59uStTRW43C3lmtWp1c45KHVcH/Vv3gZmp6nGg6Cr4SrVOr3m0ox/c6k8tv7GPaWKGsxnNKhutdY6ed5YeISnmOOb9H7y7q2m9dK3c8Yo1XUaazvLqqlPHvmn7DCegelmDSj1sqm7HK4Sozp4Xc/TyBmUNboTnGFKeXPO7we7PCbe5LlLgnyyWdG2gpXEINPdlKO9h5S8VGT4Sx4Gp02lXlVtYVINQt3NtunKLx1corMmt1vLXqmdHZ3NG3pVJLFGE4Saym1KnKHD35Ay4a5bSUpb63YxcsyTUXFfjxbXpR8VwL9OjQrwUurjKL5b0MZ8eK5Gi/wCl5OE4VFRj+5ypxlTjLee8sZllcPJEphHCSXYBpLjZCylxdvCL74Ldl70eaezbp/g65rU0vxZS6yH6LN+AmIamlC8h68qVVd7Tpz9iWV8TLpXj5V6coPxxJfpRyl7TLGAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=",
+    },
+    {      grade: "Ingenieria en Tecnologias de la Información",
+        period: "2010-2015",
+        img: "https://itp.itpachuca.edu.mx/images/LITP.png",},
+  ];
   return (
     <div>
-        Educacion
-        <Row>
-        <Col md={6}>
-        {grades.map(grade => (<CustomCard></CustomCard>))}
-        w
-    </Col>   
-    </Row>   d
+      <h1>Educacion</h1>
+      <Row>
+        {grades.map((grade) => (
+          <Col md={4}>
+            <CustomCard title={grade.grade} subtitle={grade.institute} img={grade.img} text={grade.period}></CustomCard>{" "}
+          </Col>
+        ))}
+      </Row>{" "}
     </div>
-  )
-}
+  );
+};
 
-export default Educacion
+export default Educacion;
