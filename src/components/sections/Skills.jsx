@@ -1,7 +1,4 @@
 import React from "react";
-import CustomCard from "../card/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import ContentCard from "./ContentCard";
 
 const Skills = () => {
@@ -38,7 +35,7 @@ const Skills = () => {
 },
   ];
   return (
-    <ContentCard data={skills} md={2} title={'Skills'}></ContentCard>
+    <ContentCard data={skills} md={2} title={'Tecnologías'}></ContentCard>
   );
 };
 

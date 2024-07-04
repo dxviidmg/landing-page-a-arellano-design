@@ -9,7 +9,7 @@ export function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  const menu = ["Inicio", "Educacion", "Habilidades", "Contacto"];
+  const menu = ["AboutMe", "Educación", "Tecnologías", "Contacto"];
 
   useEffect(() => {
     const onScroll = () => {
@@ -31,7 +31,7 @@ export function NavBar() {
       fixed="top"
       expand="md"
       className={scrolled ? "scrolled" : "unscrolled"}
-      style={{backgroundColor: 'red'}}
+      style={{backgroundColor: ''}}
     >
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav">

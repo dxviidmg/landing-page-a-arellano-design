@@ -1,10 +1,7 @@
 import React from "react";
-import CustomCard from "../card/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import ContentCard from "./ContentCard";
 
-const Educacion = () => {
+const Education = () => {
   const grades = [
     {
         title: "Python para Inteligencia Artificial",
@@ -21,8 +18,8 @@ const Educacion = () => {
         img: "https://itp.itpachuca.edu.mx/images/LITP.png",},
   ];
   return (
-    <ContentCard data={grades} md={4} title={'Educacion'}></ContentCard>
+    <ContentCard data={grades} md={4} title={'Educación'}></ContentCard>
   );
 };
 
-export default Educacion;
+export default Education;

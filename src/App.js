@@ -6,29 +6,37 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { NavBar } from "./components/navbar/CustomNavBar";
 import CustomCard from "./components/card/Card";
-import Inicio from "./components/sections/Inicio";
-import Educacion from "./components/sections/educacion";
-import Skills from "./components/sections/skills";
+import AboutMe from "./components/sections/AboutMe";
+import Skills from "./components/sections/Skills";
 import Contact from "./components/sections/Contact";
+import Education from "./components/sections/Education";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <NavBar></NavBar>
-      <Container style={{ marginTop: "70px" }}>
+      <Container style={{ paddingTop: "50px", paddingBottom: '50px' }}>
         <Row>
           <Col md={4}>
-          <CustomCard isFixed={true} title={'David Mejia'} subtitle={'Full Stack'} img={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHXCaI3sS-7XvMtZvdbSuVjDd6zlSYNbU-HDCF6bZl6Gq1jSNIV2VDOQ8DAxAe11VsJDA&usqp=CAU'} text={'Se el mejor'}></CustomCard>
+            <CustomCard
+              isFixed={true}
+              title={"David Mejia"}
+              subtitle={"Soy Full Stack Web Developer"}
+              img={
+                "https://png.pngtree.com/png-vector/20230728/ourlarge/pngtree-programmer-clipart-developer-sitting-behind-his-computer-in-glasses-cartoon-vector-png-image_6815441.png"
+              }
+              text={'"Cualquier tecnología suficientemente avanzada es indistinguible de la magia". -Arthur C. Clarke'}
+            ></CustomCard>
           </Col>
           <Col md={8}>
-            <Inicio></Inicio>
-            <Educacion></Educacion>
+            <AboutMe></AboutMe>
+            <Education></Education>
             <Skills></Skills>
             <Contact></Contact>
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 
